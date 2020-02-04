@@ -6,9 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Challenge 01</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+    $(window).on('load', function() {
+        $("#few1").fadeIn();
+        var figures = document.querySelectorAll('.grid-container figure');
+        for(var i = 1; i < figures.length+1; i++){
+          $("#few"+i).fadeIn(i*1000);
+        }
+      });
+  </script>
 
   <style>
     /* Add your styles here :) */
+    body{
+      margin-right: 150px;
+    }
+    a {
+      color: #ffffff;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+      grid-gap: 0rem;
+      justify-content: start;
+      color: #ffffff;
+    }
+
+    .grid-container > figure {
+      background: #91a7a1;
+      padding: 0.2rem;
+      border-radius: 0.5rem;
+    }
+
+    .grid-container > figure > img {
+      height: auto;
+      width: 100%;
+    }
+    
   </style>
 
 </head>
@@ -16,7 +53,7 @@
 <body>
   <div class="grid-container">
 
-    <figure>
+    <figure id="few1" style="display:none">
       <img src="img/01.jpg">
       <figcaption>
         <h2>Johnson Controls</h2>
@@ -25,7 +62,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id="few2" style="display:none">
       <img src="img/02.jpg">
       <figcaption>
         <h2>Rockwell Collins</h2>
@@ -34,7 +71,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id="few3" style="display:none">
       <img src="img/03.jpg">
       <figcaption>
         <h2>Dana Holding</h2>
@@ -43,7 +80,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id="few4" style="display:none">
       <img src="img/04.jpg">
       <figcaption>
         <h2>Wells Fargo</h2>
@@ -52,7 +89,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id="few5" style="display:none">
       <img src="img/05.jpg">
       <figcaption>
         <h2>AK Steel Holding</h2>
@@ -61,7 +98,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id="few6" style="display:none">
       <img src="img/06.jpg">
       <figcaption>
         <h2>Baker Hughes</h2>
@@ -71,6 +108,7 @@
     </figure>
 
   </div>
+
 </body>
 
 </html>
